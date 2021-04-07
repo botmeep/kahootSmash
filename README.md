@@ -8,8 +8,8 @@ Key Features:
  - Username randomization
 
 ## Setup Guide
-1. Install Python at python.org
-2. Once installed, run __pip install selenium__ in terminal.
+1. Install Python at [python.org](python.org)
+2. Open your terminal and run the command `pip install selenium`
 
 ## Warnings
 - I do not condone the act of Kahoot flooding. This tool was made for educational purposes.
