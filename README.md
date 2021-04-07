@@ -7,10 +7,10 @@ Key Features:
  - Incognito mode
  - Username randomization
 
-#Setup Guide
+## Setup Guide
 Install Python at python.org
 Once installed, run __pip install selenium__ in terminal.
 
-#Warnings
+## Warnings
 - I do not condone the act of Kahoot flooding. This tool was made for educational purposes.
 - Do not run __ignore_this.exe__. This is the chromedriver, and not the actual Kahoot Smasher tool.
