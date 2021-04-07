@@ -1,6 +1,5 @@
 # kahootSmash
-A Kahoot flooder tool made with Python and Selenium.  
-This tool generates random bots to join a Kahoot game.  
+A Kahoot flooder tool made with Python and Selenium. This tool generates random bots to join a Kahoot game.  
 Download this tool in the __releases__ page of this repository.  
 
 Key Features:
