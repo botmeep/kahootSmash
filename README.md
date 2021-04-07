@@ -13,4 +13,4 @@ Once installed, run __pip install selenium__ in terminal.
 
 #Warnings
 - I do not condone the act of Kahoot flooding. This tool was made for educational purposes.
-- Do not run the .exe file named __ignore_this__. It is the chromedriver, and not the actual Kahoot Smasher tool.
+- Do not run __ignore_this.exe__. This is the chromedriver, and not the actual Kahoot Smasher tool.
