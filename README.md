@@ -9,7 +9,7 @@ Key Features:
 
 #Setup Guide
 Install Python at python.org
-Once installed, run __pip install__ selenium in terminal.
+Once installed, run __pip install selenium__ in terminal.
 
 #Warnings
 - I do not condone the act of Kahoot flooding. This tool was made for educational purposes.
