@@ -8,7 +8,7 @@ Key Features:
  - Username randomization.
 
 ## Setup Guide
-1. Install Python at [**python.org**](python.org).
+1. Install Python 3.8 (or higher) at [**python.org**](python.org).
 2. Open your terminal and run the command `pip install selenium`.
 
 ## Warnings
