@@ -10,6 +10,7 @@ Key Features:
 ## Setup Guide
 1. Install Python 3.8 (or higher) at [**python.org**](python.org).
 2. Open your terminal and run the command `pip install selenium`.
+3. Install [**chromedriver**](https://chromedriver.chromium.org/downloads). Be sure to download the version that matches your chrome version.
 
 ## Warnings
 - I do not condone the act of Kahoot flooding. This tool was made for educational purposes.
