@@ -12,7 +12,7 @@ Key Features:
 2. Open your terminal and run the command `pip install selenium`.
 3. Download [**chromedriver**](https://chromedriver.chromium.org/downloads).
  - Version 90.0.4430.24 of the chromedriver is already included.
- - Be sure to download the version that matches your chrome version. You can find your chrome version in Chrom Settings > About.
+ - Be sure to download the version that matches your chrome version. You can find your chrome version in Chrome Settings > About.  
  - Place the chromedriver inside the same directory as the kahootSmash client.
 
 ## Usage
