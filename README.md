@@ -11,9 +11,8 @@ Key Features:
 1. Install Python 3.8 (or higher) at [**python.org**](python.org).
 2. Open your terminal and run the command `pip install selenium`.
 3. Download [**chromedriver**](https://chromedriver.chromium.org/downloads).
- - Version 90.0.4430.24 of the chromedriver is already included.
  - Be sure to download the version that matches your chrome version. You can find your chrome version in Chrome Settings > About.  
- - Place the chromedriver inside the same directory as the kahootSmash client.
+ - Place chromedriver.exe inside the same directory as the kahootSmash client.
 
 ## Usage
 1. Run the client (not the chromedriver).
@@ -22,4 +21,3 @@ Key Features:
 
 ## Warnings
 - I do not condone the act of Kahoot flooding. This tool was made for educational purposes.
-- Do not run __ignore_this.exe__. This is the chromedriver, and not the actual Kahoot Smasher tool.
