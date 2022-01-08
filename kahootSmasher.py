@@ -1,17 +1,3 @@
-"""
-  _         _                 _    _____                     _     
- | |       | |               | |  / ____|                   | |    
- | | ____ _| |__   ___   ___ | |_| (___  _ __ ___   __ _ ___| |__  
- | |/ / _` | '_ \ / _ \ / _ \| __|\___ \| '_ ` _ \ / _` / __| '_ \ 
- |   < (_| | | | | (_) | (_) | |_ ____) | | | | | | (_| \__ \ | | |
- |_|\_\__,_|_| |_|\___/ \___/ \__|_____/|_| |_| |_|\__,_|___/_| |_|
-
-Created by switchmeep.
-Thank you for using kahootSmash.
-
-"""
-
-
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
