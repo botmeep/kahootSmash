@@ -18,6 +18,7 @@ import random, string, time, ctypes, threading
 
 ctypes.windll.kernel32.SetConsoleTitleA("kahootSmasher")
 chrome_options = Options()
+chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
 chrome_options.add_argument("--incognito")
 chrome_options.add_argument("--log-level=3")
 chrome_options.add_argument("--headless")
@@ -58,7 +59,7 @@ class Smasher:
                 nicknameBox.send_keys(randomUser)
                 nicknameBox.send_keys(Keys.RETURN)
             except Exception as e:
-                print("Invalid Game Pin!")
+                print("Invalid Game Pin or Kahoot game locked")
                 return e
 
             time.sleep(3)

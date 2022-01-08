@@ -12,7 +12,9 @@ Created by Meep
 
 from kahootSmasher import Smasher
 import tkinter as tk
-import threading
+import threading, ctypes
+
+ctypes.windll.kernel32.SetConsoleTitleA("kahootSmasher")
 
 class client:
     def __init__(self):
@@ -38,6 +40,7 @@ class client:
         for x in range(self.counter):
             t = threading.Thread(target=self.smash.createBot)
             t.start()
+            print(f'Started thread {x+1} of {self.counter}')
 
     def killBots(self):
         self.smash.running = False
