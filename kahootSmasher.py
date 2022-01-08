@@ -31,6 +31,7 @@ class Smasher:
     def __init__(self, pin=None):
         self.pin = pin
         self.drivers = []
+        self.running = True
 
     def randomString(self):
         letters = string.ascii_lowercase
@@ -42,7 +43,7 @@ class Smasher:
         self.drivers.append(bot)
         tabNum = 0
 
-        while True:
+        while self.running == True:
             bot.get(kahootUrl)
             inputBox = bot.find_element_by_id('game-input')
             inputBox.click()
@@ -64,13 +65,6 @@ class Smasher:
             bot.execute_script("window.open('');")
             tabNum = tabNum + 1
             bot.switch_to.window(bot.window_handles[tabNum])
-    
-if __name__ == "__main__":
-    smash = Smasher(input("Game Pin: "))
-    threadCount = int(input("Thread Count: "))
-    print(f'Flooding with {threadCount} threads.')
-    
-    for x in range(threadCount):
-        print(f'Started thread {x+1} of {threadCount}')
-        t = threading.Thread(target=smash.createBot)
-        t.start()
+
+            if self.running == False:
+                bot.quit()
