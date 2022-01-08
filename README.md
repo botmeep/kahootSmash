@@ -2,6 +2,12 @@
 A Kahoot flooder tool made with Python and Selenium. This tool generates random bots to join a Kahoot game.  
 Download this tool in the [__releases__](https://github.com/switchmeep/kahootSmash/releases) page of this repository.  
 
+## How to use:
+Run client.py, enter your game pin, and adjust the thread count. Thread count is the amount of threads to create, not the amount of bots. A higher thread count will result in faster botting, but use more of your cpu.
+![](https://imgur.com/a/W2LE1JK)
+Bots will begin to join the kahoot session.
+![](https://imgur.com/a/0kgb001)
+
 Key Features:
  - Extremely lightweight.
  - Incognito mode.
@@ -14,10 +20,6 @@ Key Features:
  - Be sure to download the version that matches your chrome version. You can find your chrome version in Chrome Settings > About.  
  - Place chromedriver.exe inside the same directory as the kahootSmash client.
 
-## Usage
-1. Run the client (not the chromedriver).
-2. You will be prompted to enter your Game Pin
-3. Watch your Kahoot Game be flooded by bots.
-
 ## Warnings
 - I do not condone the act of Kahoot flooding. This tool was made for educational purposes.
+- The amount of threads that the client can run is limited by your cpu. Large thread counts may crash your computer.
