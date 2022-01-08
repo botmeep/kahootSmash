@@ -4,7 +4,7 @@ Download this tool in the [__releases__](https://github.com/switchmeep/kahootSma
 
 ## How to use:
 Run client.py, enter your game pin, and adjust the thread count. Thread count is the amount of threads to create, not the amount of bots. A higher thread count will result in faster botting, but use more of your cpu.
-![](https://imgur.com/a/W2LE1JK)
+![](https://i.imgur.com/a/W2LE1JK.gifv)
 Bots will begin to join the kahoot session.
 ![](https://imgur.com/a/0kgb001)
 
