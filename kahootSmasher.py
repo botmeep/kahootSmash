@@ -1,3 +1,16 @@
+"""
+  _         _                 _    _____                     _     
+ | |       | |               | |  / ____|                   | |    
+ | | ____ _| |__   ___   ___ | |_| (___  _ __ ___   __ _ ___| |__  
+ | |/ / _` | '_ \ / _ \ / _ \| __|\___ \| '_ ` _ \ / _` / __| '_ \ 
+ |   < (_| | | | | (_) | (_) | |_ ____) | | | | | | (_| \__ \ | | |
+ |_|\_\__,_|_| |_|\___/ \___/ \__|_____/|_| |_| |_|\__,_|___/_| |_|
+
+Created by Meep
+
+"""
+
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
@@ -7,10 +20,11 @@ ctypes.windll.kernel32.SetConsoleTitleA("kahootSmasher")
 chrome_options = Options()
 chrome_options.add_argument("--incognito")
 chrome_options.add_argument("--log-level=3")
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--disable-gpu")
 
 PATH = '.\chromedriver.exe'
 kahootUrl = 'https://kahoot.it/'
-tabNum = 0
 threadCount = 0
 
 class Smasher:
@@ -24,9 +38,9 @@ class Smasher:
         return outputString
 
     def createBot(self):
-        global tabNum
         bot = webdriver.Chrome(executable_path=PATH, chrome_options=chrome_options)
         self.drivers.append(bot)
+        tabNum = 0
 
         while True:
             bot.get(kahootUrl)
@@ -42,9 +56,9 @@ class Smasher:
                 nicknameBox.click()
                 nicknameBox.send_keys(randomUser)
                 nicknameBox.send_keys(Keys.RETURN)
-            except:
+            except Exception as e:
                 print("Invalid Game Pin!")
-                exit()
+                return e
 
             time.sleep(3)
             bot.execute_script("window.open('');")
@@ -52,12 +66,11 @@ class Smasher:
             bot.switch_to.window(bot.window_handles[tabNum])
     
 if __name__ == "__main__":
-    print(range(2))
     smash = Smasher(input("Game Pin: "))
     threadCount = int(input("Thread Count: "))
     print(f'Flooding with {threadCount} threads.')
     
     for x in range(threadCount):
-        print("started thread")
-        t = threading.Thread(target=smash.createBot())
+        print(f'Started thread {x+1} of {threadCount}')
+        t = threading.Thread(target=smash.createBot)
         t.start()
