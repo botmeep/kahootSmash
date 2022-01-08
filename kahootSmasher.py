@@ -69,3 +69,5 @@ class Smasher:
 
             if self.running == False:
                 bot.quit()
+                print(f"Killed thread {self.drivers.index(bot)+1}")
+                return
