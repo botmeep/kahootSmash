@@ -13,6 +13,7 @@ Created by Meep
 from kahootSmasher import Smasher
 import tkinter as tk
 import threading, ctypes
+from rpc import RPC
 
 ctypes.windll.kernel32.SetConsoleTitleA("kahootSmasher")
 
@@ -20,17 +21,8 @@ class client:
     def __init__(self):
         self.window = tk.Tk()
         self.counter = 5
-        print("""
- _         _                 _    _____                     _     
-| |       | |               | |  / ____|                   | |    
-| | ____ _| |__   ___   ___ | |_| (___  _ __ ___   __ _ ___| |__  
-| |/ / _` | '_ \ / _ \ / _ \| __|\___ \| '_ ` _ \ / _` / __| '_ \ 
-|   < (_| | | | | (_) | (_) | |_ ____) | | | | | | (_| \__ \ | | |
-|_|\_\__,_|_| |_|\___/ \___/ \__|_____/|_| |_| |_|\__,_|___/_| |_|
-
-Input the Game Pin in the client to begin.
-
-        """)
+        self.rpc = RPC()
+        self.rpc.start()
 
     def increase(self):
         self.counter += 1
@@ -46,14 +38,16 @@ Input the Game Pin in the client to begin.
     def createBots(self):
         if self.counter <= 0:
             return
-
-        self.smash = Smasher(int(self.pin.get()))
+        self.rpc.updatePin(self.pin.get())
+        
+        self.smash = Smasher(int(self.pin.get()), rpc=self.rpc) #Pass RPC instance for bot count updating
         for x in range(self.counter):
             t = threading.Thread(target=self.smash.createBot)
             t.start()
             print(f'Started thread {x+1} of {self.counter}')
 
     def killBots(self):
+        self.rpc.clear()
         self.smash.running = False
 
     def render(self):

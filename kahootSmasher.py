@@ -29,10 +29,11 @@ kahootUrl = 'https://kahoot.it/'
 threadCount = 0
 
 class Smasher:
-    def __init__(self, pin=None):
+    def __init__(self, pin=None, rpc=None):
         self.pin = pin
         self.drivers = []
         self.running = True
+        self.rpc = rpc #Pass Discord RPC instance
 
     def randomString(self):
         letters = string.ascii_lowercase
@@ -64,8 +65,11 @@ class Smasher:
 
             time.sleep(3)
             bot.execute_script("window.open('');")
-            tabNum = tabNum + 1
+            tabNum += 1
             bot.switch_to.window(bot.window_handles[tabNum])
+
+            #Update bot count on Discord Rich Presence
+            self.rpc.updateBotCount(tabNum*len(self.drivers))
 
             if self.running == False:
                 bot.quit()
