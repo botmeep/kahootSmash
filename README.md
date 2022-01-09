@@ -25,7 +25,9 @@ Key Features:
 
 ## Requirements
 - Selenium
-- Tkinter
+- Chromedriver
+- Python 3.8 or higher
+- Tkinter (included with Python)
 
 ## Warnings
 - I do not condone the act of Kahoot flooding. This tool was made for educational purposes.
