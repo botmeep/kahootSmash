@@ -23,6 +23,10 @@ Key Features:
  - Be sure to download the version that matches your chrome version. You can find your chrome version in Chrome Settings > About.  
  - Place chromedriver.exe inside the same directory as the kahootSmash client.
 
+## Requirements
+- Selenium
+- Tkinter
+
 ## Warnings
 - I do not condone the act of Kahoot flooding. This tool was made for educational purposes.
 - The amount of threads that the client can run is limited by your cpu. Large thread counts may crash your computer.
