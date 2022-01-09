@@ -20,6 +20,7 @@ ctypes.windll.kernel32.SetConsoleTitleA("kahootSmasher")
 class client:
     def __init__(self):
         self.window = tk.Tk()
+        self.window.resizable(False, False)
         self.counter = 5
         self.rpc = RPC()
         self.rpc.start()
